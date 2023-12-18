@@ -1,0 +1,48 @@
+body{
+  background-image: url(website_back.png);
+  background-size: cover;
+}
+#Headingdiv{
+  text-align: center;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  color :darkturquoise;
+  font-weight: bold;
+}
+.topdiv{
+   display: flex;
+   justify-content: space-between;
+   background-color :aquamarine;
+}
+#Name{
+  margin-left: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container{
+  display : flex;
+  gap: 50px;
+  margin: 50px;
+}
+img {
+  border-radius: 10px;
+  object-fit: cover;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.navigation-bar{
+  margin-right: 20px;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+#seconddiv{
+margin-top: 30px;
+font-size: 22px;
+color :darkturquoise;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+

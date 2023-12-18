@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <title>
+    Rock paper and Scissors
+  </title>
+</html>
+<body>
+  <p> Rock paper and Scissor</p>
+  <button onclick="
+      CheckWinorLoose('rock');
+  ">
+    Rock
+  </button>
+  <button onclick="
+       CheckWinorLoose('paper');
+  ">
+    Papers
+  </button>
+  <button onclick="
+       CheckWinorLoose('scissor');
+  ">
+    Scissors
+  </button>
+  <button onclick="
+   Scorereset();
+  ">
+    Reset
+  </button>
+  <script>
+    const score = {
+            win : 0,
+            loose : 0,
+            tie : 0,
+        };
+    function Scorereset(){
+      score.win = 0;
+      score.loose = 0;
+      score.tie=0;
+      alert('The scores has been reset to their initial values');
+    }
+    function CheckWinorLoose(PlayerMove){
+        const computerMove = ComputerMovePick();
+        let result = '';
+        if(PlayerMove==='scissor'){
+            if(computerMove === 'rock'){
+            result = 'Loose';
+            }
+            else if(computerMove==='paper'){
+            result = 'Won';
+            }
+            else{
+            result = 'Tie';
+            }
+        }
+        if(PlayerMove==='paper'){
+          if(computerMove === 'paper'){
+            result = 'Tie';
+            }
+            else if(computerMove==='rock'){
+            result = 'Won';
+            }
+            else{
+            result = 'Loose';
+            }
+            
+        }
+        if(PlayerMove==='rock'){
+          if(computerMove==='rock'){
+              result = 'Tie';
+          }
+          else if(computerMove==='paper'){
+              result = 'Loose';
+          }
+          else{
+              result = 'Won';
+          }
+          
+        }
+        if(result==='Won'){
+           score.win++;
+        }
+        else if(result==='Loose'){
+           score.loose++;
+        }
+        else{
+           score.tie++;
+        }
+        alert(`You picked ${PlayerMove} . Computer picked ${computerMove} . You have ${result} Your Score is Won : ${score.win} Loose : ${score.loose} Tie : ${score.tie}`);
+    }
+   function ComputerMovePick(){
+        let computerMove = '';
+        const randomNumber2 = Math.random();
+        if(randomNumber2>=0 && randomNumber2 <=0.33){
+          computerMove= 'rock';
+        }else if(randomNumber2>0.33 && randomNumber2<= 0.66){
+        computerMove = 'paper';
+        }
+        else{
+        computerMove = 'scissor';
+        }
+        return computerMove;
+   }
+  </script>
+</body>
